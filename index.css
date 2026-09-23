@@ -1,0 +1,292 @@
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(45, 45, 45, 0.9);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 90px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link {
+    padding: 12px 22px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 25, 22, 0.72),
+            rgba(30, 25, 22, 0.35),
+            rgba(30, 25, 22, 0.15)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 100px auto 0;
+}
+
+.hero-content h1 {
+    margin-bottom: 30px;
+
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+    font-weight: 700;
+
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #f1f1f1;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #333333;
+
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #dddddd;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .hero-content p {
+        max-width: 550px;
+        font-size: 17px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        min-height: 75px;
+    }
+
+    .logo {
+        width: 145px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+        margin-bottom: 25px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+
+    .header-container {
+        width: 92%;
+    }
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+}

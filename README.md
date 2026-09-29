@@ -116,13 +116,13 @@ wonderlust-travel-agency/
 
 ## Roadmap
 
-- [ ] Connect the contact form to a real backend/email service (e.g. Formspree, EmailJS, or a custom API)
-- [ ] Add a real booking flow to the hotel and tour pages
-- [ ] Dynamic pricing based on date selection
-- [ ] Tour search / filtering functionality
-- [ ] Test the mobile menu and responsive layout across all pages
-- [ ] Optimize images (size/performance)
-- [ ] Publish a live demo via GitHub Pages
+- Connect the contact form to a real backend/email service
+- Add a real booking flow to the hotel and tour pages
+- Add dynamic pricing based on date selection
+- Add tour search and filtering
+- Improve responsive behavior across all pages
+- Optimize images for performance
+- Publish a live demo via GitHub Pages
 
 ## License
 
